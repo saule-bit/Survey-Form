@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Survey Form.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <h1 id="title">Survey Form</h1><br>
+                <p id="description1">Personalize Your Job Search</p><br>
+                <p id="description2">Thanks for checking out our
+                platform! We'd love to show you the jobs we
+                have that match your interests. Just take a few seconds to let us know what you're looking for!</p>
+                <div class="grid">
+                    <div class="grid_body">
+                        <form id="survey-form" action="mailto:sat.translation.services@gmail.com"
+                        enctype="text/plain" method="post" class="grid-item">
+                        <div class="grid-item_1">
+                            <label id="name-label" for="name">Name</label>
+                            <input id="name" type="text"
+                                   placeholder="Enter your name here" name="name" required>
+                        </div>
+                        <div class="grid-item_2">
+                            <label id="email-label" for="email">Email</label>
+                            <input id="email" type="email"
+                                    placeholder="Enter your email here" name="email" multiple required>
+                        </div>
+                        <div class="grid-item_3">
+                            <label id="number-label" for="age">Age(optional)</label>
+                            <input id="number" type="number" min="19" max="99"
+                                    placeholder="enter your age here" name="age">
+                        </div>
+                        <h2 class="subtitle">Which option best describes your current role?</h2>
+                        <div class="grid-item_4">
+                            <label for="role">Select current role:</label>
+                            <select id="dropdown1" name="role">
+                                <option value="student">Student</option>
+                                <option value="full time job">Rull time job</option>
+                                <option value="full time learner">Full Time Learner</option>
+                                <option value="prefer not to say">Prefer not to say</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <h2 class="subtitle">Select Levels of Remote Work:</h2>
+                        <div class="grid-item_5">
+                            <label for="remote work level1">%100 Remote</label>
+                            <input id="remote work level1" type="radio"
+                                   name="level" value="%100 Remote" checked>
+                        </div>
+                        <div class="grid-item_6">
+                            <label for="remote work level2">Remote – During Pandemic</label>
+                            <input id="remote work level2" type="radio"
+                                   name="level" value="Remote – During Pandemic">
+                        </div>
+                        <div class="grid-item_7">
+                            <label for="remote work level3">Partial Remote Work</label>
+                            <input id="remote work level3" type="radio"
+                                   name="level" value="Partial Remote Work">
+                        </div>
+                        <div class="grid-item_8">
+                            <label for="remote work level4">Option for Remote Work</label>
+                            <input id="remote work level4" type="radio"
+                                   name="level" value="Option for Remote Work">
+                        </div>
+                        <h2 class="subtitle">Select Remote Work Schedules:</h2>
+                        <div class="grid-item_9">
+                            <label for="remote work schedule1">Business hours</label>
+                            <input type="radio" id="remote work schedule1"
+                                   name="schedule" value="Business hours" checked>
+                        </div>
+                        <div class="grid-item_10">
+                            <label for="remote work schedule2">Core hours</label>
+                            <input type="radio" id="remote work schedule2"
+                                   name="schedule" value="Core hours">
+                        </div>
+                        <div class="grid-item_11">
+                            <label for="remote work schedules">Flexible</label>
+                            <input type="radio" id="remote work schedule3"
+                                   name="schedule" value="Flexible">
+                        </div>
+                        <h2 class="subtitle">Although each of the 50+ job categories on our platform has available
+                            remote jobs, some of the top (and fastest growing!) fields for remote work include:</h2>
+                        <div class="grid-item_12">
+                            <label for="field">Select the field for remote work:</label>
+                            <select id="dropdown2" name="field">
+                                <option value="computer/IT">Computer/IT</option>
+                                <option value="customer service">Customer Service</option>
+                                <option value="accounting & finance">Accounting & Finance</option>
+                                <option value="poject management">Project Management</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="sales">Sales</option>
+                                <option value="mortgage & eeal estate">Mortgage & Real Estate</option>
+                                <option value="medical & health">Medical & Health</option>
+                                <option value="poject management">Project Management</option>
+                                <option value="education & training">Education & Training</option>
+                            </select>
+                        </div>
+                        <h2 class="subtitle">Choose as many as you'd like:</h2>
+                        <div class="grid-item_13">
+                            <label for="personal job search situation1">I don't have a job and am looking
+                                for one.</label>
+                            <input type="checkbox" id="personal job search situation1"
+                                   name="job search situation" value="I don't have a job and am looking
+                                        for  one">
+                        </div>
+                        <div class="grid-item_14">
+                            <label for="personal job search situation2">I have a job but want a different/
+                                better one.</label>
+                            <input type="checkbox" id="personal job search situation2"
+                                   name="job search situation" value="I have a job but want a different/better one">
+                        </div>
+                        <div class="grid-item_15">
+                            <label for="personal job search situation3">I'm curious about remote or
+                                flexible job options.</label>
+                            <input type="checkbox" id="personal job search situation3"
+                                   name="job search situation" value="I'm curious about remote or flexible job options">
+                        </div>
+                        <div class="grid-item_16">
+                            <label for="personal job search situation4">I want to have a better work-life
+                                balance.</label>
+                            <input type="checkbox" id="personal job search situation4"
+                                   name="job search situation" value="I want to have a better work-life balance">
+                        </div>
+                        <div class="grid-item_17">
+                            <label for="personal job search situation5">I'm a parent looking for a more
+                                flexible job.</label>
+                            <input type="checkbox" id="personal job search situation5"
+                                   name="job search situation" value="I'm a parent looking for a more flexible job">
+                        </div>
+                        <div class="grid-item_18">
+                            <label for="personal job search situation6"> I'm a freelancer looking for
+                                clients or projects.</label>
+                            <input type="checkbox" id="personal job search situation6"
+                                   name="job search situation" value="I'm a freelancer looking for clients or projects">
+                        </div>
+                        <div class="grid-item_19">
+                            <label for="personal job search situation7">I want to avoid job scams.</label>
+                            <input type="checkbox" id="personal job search situation7"
+                                   name="job search situation" value="I want to avoid job scams">
+                        </div>
+                        <div class="grid-item_20">
+                            <label for="personal job search situation8">Other</label>
+                            <input type="checkbox" id="personal job search situation8"
+                                   name="job search situation" value="Other">
+                        </div>
+                        <h2 class="subtitle">Any comments or suggestions?</h2>
+                        <div class="grid-item_21">
+                            <textarea id="comments" name="comments" placeholder="Enter your comments here"
+                                      maxlength="500"></textarea>
+                        </div>
+                        <div class="grid-item_22">
+                            <button type="submit" id="submit">Submit</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
