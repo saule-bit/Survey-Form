@@ -44,7 +44,7 @@ secondary font: Roboto Condensed
 font-family: 'Lato', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
 
-Dark blue - rgb (6, 7, 56) 
+Dark blue: rgb (6, 7, 56)
 */
 
 html {
@@ -120,10 +120,10 @@ body {
     height: auto;
     padding: 30px;
     /* grid-template: repeat (21, 1fr) / repeat (1, 1fr);
-    
+
     justify-items: stretch;
     align-items: stretch; */
-    
+
     background-color: rgb(7, 51, 133);
     margin: 30px auto;
 
@@ -131,30 +131,30 @@ body {
 	/* grid-template-rows: auto;
 	*/
 	/* justify-content: space-evenly;
-	justify-content:space-around;*/	
+	justify-content:space-around;*/
 }
 
 #survey-form {
     display: grid;
     grid-template: repeat (22, 1fr) / 1fr;
     grid-template-columns: auto;
-    grid-template-rows: auto;  
+    grid-template-rows: auto;
 
     row-gap: 15px;
     justify-items: stretch;
     align-items: stretch;
-    
+
 }
 
 .grid_item {
     /* width: 30px;
     margin-top: 20px;
     margin-bottom: 20px; */
-   
+
     text-align: lef;
     font-size: 0.5em;
     border:5px dashed rgb(248, 12, 12);
-    
+
     /* background-color: rgb(154, 202, 22); */
     /* -webkit-grid-row-align: center;
     -moz-grid-row-align: center;
@@ -168,7 +168,7 @@ body {
     justify-self: stretch;
     align-self: stretch;
     order: 1;
-    
+
     /* grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -351,7 +351,7 @@ body {
 	/* background-color: rgb(250, 248, 248);
 	background-size: cover;
 } */ */
-/* 
+/*
 div.form-example {
     display: table-row;
 }
@@ -375,7 +375,7 @@ input {
     margin: .4rem;
 }
 
-checkboxes 
+checkboxes
 p,
 label {
     font: 1rem 'Fira Sans', sans-serif;
@@ -396,18 +396,18 @@ textarea ~ button {
 
 @media (min-width: 767px){
     .wrapper{
-         margin: 0px auto;  
+        margin: 0px auto;
     }
 }
-        
+
 @media (min-width: 992px){
     .wrapper{
-       margin: 0px auto;  
+       margin: 0px auto;
     }
 }
 
 @media (min-width: 1200px){
     .wrapper{
-        margin: 0px auto;  
+        margin: 0px auto;
     }
 }
