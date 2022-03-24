@@ -1,5 +1,2 @@
-const myFirstvar = 1
-
-const myFunc = () => {
-    console(myFirstvar);
-}
+document.body.innerHTML = '<h1>Survey Form</h1>'
+console.log('Test 2')
