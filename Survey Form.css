@@ -1,413 +1,201 @@
-/*Обнуление*/
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: hsl(240deg 31% 7% / 90%);
+  --color-darkred: #7b0308;
 }
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
-
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-input,button,textarea{font-family:inherit;}
-
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
-/*--------------------*/
-
-/*
-primary font: Lato
-secondary font: Roboto Condensed
-
-font-family: 'Lato', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-
-Dark blue: rgb (6, 7, 56)
-*/
-
-html {
-    height: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    color: rgb(234, 237, 241);
-    margin: 0; /* Убираем отступы */
-    min-height: 100%; /* Высота страницы */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2HG79srpD7SjgIsi8bLlbIzJebu25Tv63cQ&usqp=CAU");
-    /* background-position: 100% 100%; */
-    background-repeat: no-repeat;
-    /* background-position: absolute; */
-	background-color: rgba(6, 7, 73, 0.95);
-	background-size: 100% 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
 }
 
-/* .content {
-    background-color: rgba(179, 85, 4);
-    align-items: center;
-    contain: center;
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
 
-} */
-
-#title {
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.5em;
-    font-style: oblique;
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=rgba(58, 58, 158, 0.8), endColorstr=rgba(136, 136, 206, 0.7))"; /* IE 8-9 */
+  /* background: -webkit-linear-gradient(115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  ); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  /* background: -moz-linear-gradient(115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  ); /* Firefox 3.6-15 */
+  /* background: -o-linear-gradient(
+    115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  ); /* Opera 11.1-12 */
+  /* background: linear-gradient(
+    115deg,
+    rgba(58, 58, 158, 0.8),
+    rgba(136, 136, 206, 0.7)
+  );  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.subtitle {
-    font-size: 1em;
-    margin: 20px 0px 0px 0px;
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
 }
 
-#description1 {
-    margin-top: 5px;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.5em;
-    font-style: oblique;
+p {
+  font-size: 1.125rem;
 }
 
-#description2 {
-    margin-top: 5px;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.5em;
-    font-style: oblique;
-}
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.grid {
-    font-size: 1em;
-    width: 100%;
-    position: relative;
-    /* grid-template: repeat(21, 1fr) / repeat(1, 1fr); */
-}
-.grid_body {
-    /* display: grid; */
-    width: 80%;
-    height: auto;
-    padding: 30px;
-    /* grid-template: repeat (21, 1fr) / repeat (1, 1fr);
-
-    justify-items: stretch;
-    align-items: stretch; */
-
-    background-color: rgb(7, 51, 133);
-    margin: 30px auto;
-
-    /* justify-content: center; */
-	/* grid-template-rows: auto;
-	*/
-	/* justify-content: space-evenly;
-	justify-content:space-around;*/
-}
-
-#survey-form {
-    display: grid;
-    grid-template: repeat (22, 1fr) / 1fr;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-    row-gap: 15px;
-    justify-items: stretch;
-    align-items: stretch;
-
-}
-
-.grid_item {
-    /* width: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px; */
-
-    text-align: lef;
-    font-size: 0.5em;
-    border:5px dashed rgb(248, 12, 12);
-
-    /* background-color: rgb(154, 202, 22); */
-    /* -webkit-grid-row-align: center;
-    -moz-grid-row-align: center;
-    -ms-grid-row-align: center;
-    -o-grid-row-align: center; */
-}
-
-.grid_item_1 {
-    grid-auto-columns: auto;
-    grid-auto-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 1;
-
-    /* grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3; */
-}
-.grid_item_2 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 2;
-}
-
-.grid_item_3 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 3;
-}
-
-.grid_item_4 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 4;
-}
-
-.grid_item_5 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 5;
-}
-
-.grid_item_6 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 6;
-}
-
-.grid_item_7 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 7;
-}
-
-.grid_item_8 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 8;
-}
-
-.grid_item_9 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 9;
-}
-
-.grid_item_10 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 10;
-}
-
-.grid_item_11 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 11;
-}
-
-.grid_item_12 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 12;
-}
-
-.grid_item_13 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 13;
-}
-
-.grid_item_14 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 14;
-}
-
-.grid_item_15 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 15;
-}
-
-.grid_item_16 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 16;
-}
-
-.grid_item_17 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 17;
-}
-
-.grid_item_18 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 18;
-}
-
-.grid_item_19 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 19;
-}
-
-.grid_item_20 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 20;
-}
-
-.grid_item_21 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 21;
-}
-
-.grid_item_22 {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: stretch;
-    align-self: stretch;
-    order: 22;
-}
-
-/* .wrapper {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV4x-0m3c43PaDNYvHpncp4bG3JmvFWQccQ&usqp=CAU"); */
-    /* background-repeat: no-repeat; */
-    /* background-position: absolute; */
-	/* background-color: rgb(250, 248, 248);
-	background-size: cover;
-} */ */
-/*
-div.form-example {
-    display: table-row;
-}
-
-label, input {
-    display: table-cell;
-    margin-bottom: 10px;
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 label {
-    padding-right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
-d
-p,
-label {
-    font: 1rem 'Fira Sans', sans-serif;
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-input {
-    margin: .4rem;
+button {
+  border: none;
 }
 
-checkboxes
-p,
-label {
-    font: 1rem 'Fira Sans', sans-serif;
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
 }
 
-input {
-    margin: .4rem;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
 
-
-textarea ~ button {
-    color: purple;
-}
- */
-
-
-
-
-@media (min-width: 767px){
-    .wrapper{
-        margin: 0px auto;
-    }
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-@media (min-width: 992px){
-    .wrapper{
-       margin: 0px auto;
-    }
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
 }
 
-@media (min-width: 1200px){
-    .wrapper{
-        margin: 0px auto;
-    }
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-darkred);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
 }
